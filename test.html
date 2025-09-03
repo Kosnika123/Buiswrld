@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Countdown Number Animation</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding-top: 100px;
+      font-size: 48px;
+    }
+    #number {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="number">0</div>
+
+  <script>
+    function animateNumber(startFrom, endAt, duration, onComplete) {
+      const el = document.getElementById('number');
+      const range = endAt - startFrom;
+      const stepTime = Math.abs(Math.floor(duration / Math.abs(range)));
+      let current = startFrom;
+
+      const timer = setInterval(() => {
+        el.textContent = current;
+        if (current === endAt) {
+          clearInterval(timer);
+          if (onComplete) onComplete();
+        }
+        current += (range > 0 ? 1 : -1);
+      }, stepTime);
+    }
+
+    function startAnimation(finalValue) {
+      const downTo = -5;
+      animateNumber(0, downTo, 500, () => {
+        animateNumber(downTo, finalValue, 1000);
+      });
+    }
+
+    // Start with final value of 10
+    startAnimation(10);
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <style>
+        body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.slider {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+
+.slide {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.text {
+  position: absolute;
+  bottom: 20%;
+  left: 10%;
+  color: white;
+  font-size: 3em;
+  opacity: 0;
+  animation: fadeInText 2s forwards;
+}
+
+@keyframes fadeInText {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+    </style>
+
+    <div class="slider">
+  <div class="slide active" style="background-image: url('/test1/B1.jpg');">
+    <div class="text">Welcome to Our Site</div>
+  </div>
+  <div class="slide" style="background-image: url('/test1/B2.jpg');">
+    <div class="text">Discover Our Services</div>
+  </div>
+  <div class="slide" style="background-image: url('/test1/B3.jpg');">
+    <div class="text">Contact Us Today</div>
+  </div>
+</div>
+
+
+    <script>
+        let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+
+function showNextSlide() {
+  slides[currentSlide].classList.remove('active');
+  currentSlide = (currentSlide + 1) % slides.length;
+  slides[currentSlide].classList.add('active');
+}
+
+setInterval(showNextSlide, 5000); // Change every 5 seconds
+
+    </script>
+</body>
+</html>
