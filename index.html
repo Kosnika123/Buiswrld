@@ -6,6 +6,7 @@
     <title> Bis World </title> 
     <link rel="stylesheet" href="style.css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+     <link rel="shortcut icon" href="Logo/logo-2n.png" >
 </head>
 <body>
     
@@ -15,19 +16,27 @@
 <img src="Logo/logo-2n.png" alt="Bizwiz">
 </div>
 
-<nav>
-    <ul>
-<a href="index.html" class="active"> HOME </a>
- <a href="aboutUs.html"> ABOUT  </a>
-<a href="services.html"> SERVICES </a>
-<a href="#" class="show1"><i class="fa-brands fa-facebook"></i></a>
-<a href="#" class="show1"><i class="fa-brands fa-twitter"></i></a>
-<a href="#" class="show1"><i class="fa-brands fa-instagram"></i></a>
-    </ul>
+<nav class="nav">
+  <div class="nav-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <ul class="nav-links">
+    <li class="close-sidebar">&times;</li>
+    <li><a href="index.html" class="active">HOME</a></li>
+    <li><a href="aboutUs.html">ABOUT</a></li>
+    <li><a href="services.html">SERVICES</a></li>
+    <li><a href="#" class="show1"><i class="fa-brands fa-facebook"></i></a></li>
+    <li><a href="#" class="show1"><i class="fa-brands fa-twitter"></i></a></li>
+    <li><a href="#" class="show1"><i class="fa-brands fa-instagram"></i></a></li>
+  </ul>
+  <div class="nav-backdrop"></div>
 </nav>
 
 <div class="Tel-No">
-<b> +1 (800)333 44 77 </b> 
+<b> +1 (800)333 44 77 </b>
 </div>
 
 </header>
@@ -36,10 +45,12 @@
   <img src="homeImg/B4.jpg" alt="b1">
   
   <div class="defaultText">
-<h1> BUISNESS SOLUTIONS </h1>
+<h1> BUISNESS <br> SOLUTIONS </h1>
+
+ <span class="span float-up"> It  Impacts Positive Feelings About The Brand </span>
   </div>
 
-  <span class="span float-up"> It  Impacts Positive Feelings About The Brand </span>
+ 
     </div>
 
 <section class="slider">
@@ -88,7 +99,7 @@
 
 <div class="container">
 
-<div class="card">
+<div class="card gone">
   <img src="homeImg/B9 (1).jpg" alt="">
 
 <div class="cardText">
@@ -98,7 +109,7 @@
 </div>
 </div>
 
-<div class="card">
+<div class="card gone">
   <img src="homeImg/B9 (3).jpg" alt="">  
   <div class="cardText">
 <h3> Very <i> Useful Elements </i> for <br> perfect flow </h3>
@@ -150,6 +161,7 @@
 
 </div>
 <br> 
+
 <div class="Services-container">
 
 <div class="ServicesVid">
@@ -228,13 +240,13 @@
 <div class="Team-container">
 
 <div class="teamCard">
-<img src="Team/Team (1).jpeg" alt="">
+<img src="/Team/Team (1).jpeg" alt="">
 <h2> Tom Cein </h2>
 <h5> <i> CEO</i> </h5>
 </div>
 
 <div class="teamCard">
-<img src="Team/Team (2).jpeg" alt="">
+<img src="/Team/Team (2).jpeg" alt="">
 <h2> Miria </h2>
 <h5> <i> Lead Developer</i> </h5>
 </div>
@@ -244,13 +256,13 @@
 <div class="Team-container">
 
 <div class="teamCard">
-<img src="Team/Team (3).jpeg" alt="">
+<img src="/Team/Team (3).jpeg" alt="">
 <h2> Melene </h2>
 <h5><i> Excutive</i> </h5>
 </div>
 
 <div class="teamCard">
-<img src="Team/Team (4).jpeg" alt="">
+<img src="/Team/Team (4).jpeg" alt="">
 <h2> Joyce<h2>
   <h5> <i> Lead Developer </i>  </h5>
 </div>
@@ -375,104 +387,102 @@
 
 </section> <br>
 
+<!-- footer.html -->
+<footer class="footer">
+  <div class="footer-container">
 
-<footer class="Laptop-Footer">
+    <!-- Office -->
+    <div class="footer-section office">
+      <h3>Office</h3>
+      <p><i class="fas fa-map-marker-alt"></i> 121 King Street, NewYork</p>
+      <p><i class="fas fa-phone"></i> +1 (800) 333 44 55</p>
+      <p><i class="fas fa-envelope"></i> newyork@gmail.com</p>
+      <p><i class="fas fa-fax"></i> +1 (800) 333 99 88</p>
+      <p><i class="fas fa-at"></i> @xtra_live</p>
+    </div>
 
-<div class="KLinks">
-    <h4 style="color: #000;"> Store Location </h4>
-   <nav>
-   <br> <br>
-    <ul>
- <li class="dropdown"><a href="#"> 300 Terry Franchise Street </a></li>
-<li><a href=" #"> San Francisco, CA 94132 </a></li>
- <li><a href="#">K.Tech@gmail.com</a></li> 
-<li><a href="#"> Tel No: 1120938938 </a></li>
-    </ul>
-</nav> 
-</div>    
+    <!-- News -->
+    <div class="footer-section news">
+      <h3>News</h3>
+      <div class="news-item">
+        <img src="News/News1.jpg" alt="news">
+        <div>
+          <p>A Place of...</p>
+          <span>10 June 2024</span>
+        </div>
+      </div>
+      <div class="news-item">
+        <img src="News/News2.jpg" alt="news">
+        <div>
+          <p>How to create...</p>
+          <span>10 June 2024</span>
+        </div>
+      </div>
+    </div>
 
-<div class="Kcartegories">
+    <!-- Shortcuts -->
+    <div class="footer-section shortcuts">
+      <h3>Shortcuts</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">City Store</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Clients</a></li>
+        <li><a href="#">Consultation</a></li>
+        <li><a href="#">Publicity</a></li>
+        <li><a href="#">Support</a></li>
+        <li><a href="#">Maps</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Employees</a></li>
+        <li><a href="#">Teams</a></li>
+        <li><a href="#">Benefits</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
 
-<h4 style="color: #000;">Shop</h4>  <br> <br>
-<ul>
-    <li><a href="ShopAll.html"> Shop All </a></li>
-    <li><a href="#"> Computer </a></li>
-    <li><a href="#">Tablets</a></li>
-    <li><a href="dronePage.html">Drones</a></li>
-    <li><a href="#"> Mobile  </a></li>
-    <li><a href="#"> TV & Home Cinema </a></li>
-    <li><a href="Wearable.html"> Wearable Tech </a></li>
-</ul>
-    
-</div>
-
-<div class="Kcatalog" >
-    <h4 style="color: #000;"> Customer Support </h4>
-<ul><br> <br>
-<li><a href="/FileFolder/helpCenter.html"> Help Center</a></li>
-<li><a href="/FileFolder/about.html"> About Us</a></li>
-</ul>
-</div>
-
-
-<div class="KBuisness" >
-    <h4 style="color: #000;"> Policy </h4>
-<ul> <br> <br>
-<li><a href="#">Shipp & Returns</a></li>
-<li><a href="#"> Terms & Conditions </a></li>
-<li><a href="#">Payment Methods</a></li>
-<li><a href="#">FAQ</a></li>
-</ul>
-</div>
-
+    <!-- Working Hours -->
+    <div class="footer-section hours">
+      <h3>Working Hours</h3>
+      <p>Our support available to help you 24 hours a day, seven days a week.</p>
+      <p>Monday to Friday<br><strong>8AM - 4PM</strong></p>
+      <p>Saturday<br><strong>8AM - 1PM</strong></p>
+    </div>
+  </div>
 </footer>
 
-<div class="social-link">
-
-<div class="CopyRight">
-<p style="text-align: center;"> We accept the following payment methods </p>
-<br> <br> 
-</div>
-</div>
-
-
-<div class="PaymentMethods">
-
-  <div class="P1">
-  <img src="/PaymentMethds/payment Option.png" alt="Pay1">
-  </div>
-  
-  <div class="P1">
-  <img src="/PaymentMethds/PayPal.png" alt="Pay2">
-  </div>
-
-  <div class="P1">
-  <img src="/PaymentMethds/Visa.png" alt="Pay3">
-  </div>
-
-  <div class="P1">
-  <img src="/PaymentMethds/Discover.png" alt="Pay4">
-  </div>
-
-  <div class="P1">
-  <img src="/PaymentMethds/Diners.png" alt="Pay5">
-  </div>
-
-  <div class="P1">
-  <img src="/PaymentMethds/brand-jcb@3x.png" alt="Pay6">
-  </div>
-
-  <div class="P1">
-  <img src="/PaymentMethds/brand-chinaunionpay@3x.png" alt="Pay7">
-  </div>
-
-  <div class="P1">
-  <img src="/PaymentMethds/brand-amex@3x.png" alt="Pay8">
-  </div>
-
-</div>
-
 <script src="javascript.js"></script>
+
+<script>
+
+const navToggle = document.querySelector('.nav-toggle');
+const navLinks = document.querySelector('.nav-links');
+const closeSidebar = document.querySelector('.close-sidebar');
+const navBackdrop = document.querySelector('.nav-backdrop');
+
+navToggle.addEventListener('click', () => {
+navLinks.classList.toggle('show');
+navToggle.classList.toggle('active');
+});
+
+document.addEventListener('click', (e) => {
+  if(!navToggle.contains(e.target) && !navLinks.contains(e.target)) {
+    navLinks.classList.remove('show');
+    navToggle.classList.remove('active');
+  }
+})
+
+closeSidebar.addEventListener('click', () => {
+    navLinks.classList.remove('show');
+    navToggle.classList.remove('active');
+});
+
+navBackdrop.addEventListener('click', () => {
+    navLinks.classList.remove('show');
+    navToggle.classList.remove('active');
+});
+
+
+</script>
 
 </body>
 </html>
